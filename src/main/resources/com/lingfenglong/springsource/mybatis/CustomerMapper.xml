@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lingfenglong.springsource.mybatis.CustomerMapper">
+
+    <select id="findById" resultType="com.lingfenglong.springsource.mybatis.Customer">
+        select customers.id, customers.name
+        from customers
+        where id = #{id}
+    </select>
+</mapper>
